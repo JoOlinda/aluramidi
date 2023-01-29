@@ -13,5 +13,13 @@ for(let i =0; i < listaTeclas.length; i++){
     tecla.onclick = function(){
         tocaSom(idInstrumento)
     }
-    
+    tecla.onkeydown = function(evento){
+        if(evento.code == 'Enter' || evento.code === 'Space'){
+            tecla.classList.add('ativa')
+        }
+    }
+    tecla.onkeyup = function(){
+        tecla.classList.remove('ativa')
+    }
+
 }
